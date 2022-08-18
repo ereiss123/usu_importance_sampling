@@ -22,7 +22,6 @@ fi
 
 for i in *.prism; do
     x=$(basename $i .prism)
-    echo "x=$x"
     prism $i -exportmodel $i.dot
     dot -Tsvg $i.dot -o $x.svg
     mv *.svg ./img/
